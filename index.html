@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fa" class="dark:bg-gray-500">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      defer
+      type="text/javascript"
+      src="./tagh/jalalidatepicker.min.js"
+    ></script>
+    <script defer src="./src/js/dark.js"></script>
+
+    <title>Auto_Rent</title>
+    <link rel="stylesheet" crossorigin href="/assets/index-m_wpNEWD.css">
+  </head>
+
+  <body>
+    <!-- #region project-->
+    <!-- #region header-->
+    <div
+      class="w-full h-[185px] bg-[url(/public/png/1.png)] bg-contain bg-no-repeat mx-auto block"
+    >
+      <div
+        class="w-[70%] h-[40px] bg-white mx-auto dark:bg-gray-700 sm:h-[96px] sm:w-[1224px] rounded-b-[8px] sm:rounded-b-[18px] flex items-center"
+      >
+        <button id="toggle-dark-mode" class="w-[20px]">
+          <img class="dark:hidden" src="data:image/svg+xml,%3csvg%20height='200px'%20width='200px'%20version='1.1'%20id='Capa_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%20493.665%20493.665'%20xml:space='preserve'%20fill='%2300000'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'%3e%3c/g%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'%3e%3c/g%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cg%3e%3cg%3e%3cpath%20style='fill:%23010002;'%20d='M186.364,371.744c-28.084,0-55.039-6.292-80.099-18.704l-43.13-21.354l21.354,43.13%20c36.286,73.312,109.589,118.848,191.298,118.848c117.653,0,213.375-95.722,213.375-213.375%20c0-81.708-45.536-155.012-118.848-191.298l-43.138-21.354l21.354,43.138c12.404,25.069,18.696,52.015,18.696,80.107%20C367.225,290.605,286.093,371.744,186.364,371.744z%20M383.482,190.883c0-31.36-7.356-60.989-20.386-87.317%20c65.053,32.205,109.801,99.226,109.801,176.731c0,108.866-88.252,197.118-197.118,197.118%20c-77.506,0-144.526-44.748-176.731-109.801c26.32,13.03,55.957,20.386,87.317,20.386%20C295.23,388.001,383.482,299.749,383.482,190.883z'%3e%3c/path%3e%3cpath%20style='fill:%23010002;'%20d='M43.724,318.656l63.46-46.097l63.46,46.105l-24.239-74.596l63.46-46.105h-78.449l-24.239-74.596%20l-24.239,74.596H4.503l63.452,46.105L43.724,318.656z%20M54.535,214.22h40.212l12.429-38.245l12.429,38.245h40.212l-32.539,23.638%20l12.429,38.237l-32.531-23.63l-32.539,23.638l12.429-38.245L54.535,214.22z'%3e%3c/path%3e%3cpath%20style='fill:%23010002;'%20d='M165.14,171.651l55.77-40.529l55.77,40.521l-21.297-65.565l55.77-40.513h-68.938L220.91,0%20l-21.305,65.565h-68.938l55.77,40.521L165.14,171.651z%20M180.706,81.822h30.718l9.486-29.206l9.486,29.206h30.718l-24.849,18.054%20l9.494,29.206l-24.849-18.045l-24.849,18.054l9.494-29.206L180.706,81.822z'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt="t-4" />
+          <div>
+            <img
+              id="myElement"
+              class="transition-opacity"
+              src="data:image/svg+xml,%3csvg%20height='200px'%20width='200px'%20version='1.1'%20id='Capa_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%20493.665%20493.665'%20xml:space='preserve'%20fill='%23ffffff'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'%3e%3c/g%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'%3e%3c/g%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cg%3e%3cg%3e%3cpath%20style='fill:%23ffffff;'%20d='M186.364,371.744c-28.084,0-55.039-6.292-80.099-18.704l-43.13-21.354l21.354,43.13%20c36.286,73.312,109.589,118.848,191.298,118.848c117.653,0,213.375-95.722,213.375-213.375%20c0-81.708-45.536-155.012-118.848-191.298l-43.138-21.354l21.354,43.138c12.404,25.069,18.696,52.015,18.696,80.107%20C367.225,290.605,286.093,371.744,186.364,371.744z%20M383.482,190.883c0-31.36-7.356-60.989-20.386-87.317%20c65.053,32.205,109.801,99.226,109.801,176.731c0,108.866-88.252,197.118-197.118,197.118%20c-77.506,0-144.526-44.748-176.731-109.801c26.32,13.03,55.957,20.386,87.317,20.386%20C295.23,388.001,383.482,299.749,383.482,190.883z'%3e%3c/path%3e%3cpath%20style='fill:%23ffffff;'%20d='M43.724,318.656l63.46-46.097l63.46,46.105l-24.239-74.596l63.46-46.105h-78.449l-24.239-74.596%20l-24.239,74.596H4.503l63.452,46.105L43.724,318.656z%20M54.535,214.22h40.212l12.429-38.245l12.429,38.245h40.212l-32.539,23.638%20l12.429,38.237l-32.531-23.63l-32.539,23.638l12.429-38.245L54.535,214.22z'%3e%3c/path%3e%3cpath%20style='fill:%23ffffff;'%20d='M165.14,171.651l55.77-40.529l55.77,40.521l-21.297-65.565l55.77-40.513h-68.938L220.91,0%20l-21.305,65.565h-68.938l55.77,40.521L165.14,171.651z%20M180.706,81.822h30.718l9.486-29.206l9.486,29.206h30.718l-24.849,18.054%20l9.494,29.206l-24.849-18.045l-24.849,18.054l9.494-29.206L180.706,81.822z'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e"
+              alt=""
+            />
+          </div>
+        </button>
+
+        <div
+          class="w-full flex flex-row-reverse items-center justify-between mx-[10px] ml-5 sm:mx-[36px]"
+        >
+          <div class="w-[60px] px-[10px] sm:w-[150px] sm:h-[59px]">
+            <img src="/assets/Logo-Cd1U2lJB.png" alt="" />
+          </div>
+          <div
+            class="flex flex-row-reverse font-1 gap-1 whitespace-nowrap text-[ #353535] text-[5px] cursor-pointer dark:text-white sm:text-[18px] sm:gap-9 sm:cursor-pointer"
+          >
+            <div><h3>رزرو خودرو</h3></div>
+            <div><h3>خدمات ما</h3></div>
+            <div><h3>بلاگ</h3></div>
+            <div><h3>درباره ما</h3></div>
+            <div><h3>تماس با ما</h3></div>
+            <div></div>
+          </div>
+          <div
+            class="w-[40px] h-[10px] bg-[#194BF0] rounded-[2px] dark:bg-white dark:text-[#194BF0] font-1 text-[5px] flex items-center justify-center text-white sm:w-[110px] sm:h-[48px] sm:rounded-[8px] cursor-pointer"
+          >
+            <h3>ورود/ثبت نام</h3>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-[126px] h-[47px] ml-auto mt-[1px] mr-[29px] flex flex-col items-end"
+      >
+        <div>
+          <h3 class="text-[17px] text-[#FDB713] font-2 text-right">
+            اُتـــو رِنت؛ سریع، آسان و به صرفه
+          </h3>
+        </div>
+        <div >
+          <h5
+            class="w-[173px] h-[14px] font-2 text-[6px] text-[#F9F9F9] text-right"
+          >
+            ! سرویس دهنده رزرو خودرو در ایران در کمترین زمان ممکن
+          </h5>
+        </div>
+      </div>
+      <!-- #region time-->
+      <div
+        class="w-[295px] h-[56px] dark:bg-gray-700 absolute top-[160px] left-[50px] rounded-t-[6px] bg-white"
+      >
+        <div
+          class="w-full h-[14px] flex justify-self-start mt-1.5 pr-1.5 gap-1 flex-row-reverse"
+        >
+          <div
+            class="w-[51px] h-[14px] border border-solid border-gray-300 rounded-2xl dark:border-white bg-[#194BF0] flex items-center justify-center cursor-pointer"
+          >
+            <h5 class="font-1 text-[5px] text-white">اجاره خودرو بی راننده</h5>
+          </div>
+          <div
+            class="w-[51px] h-[14px] border border-solid border-gray-300 rounded-2xl dark:border-white dark:bg-white flex items-center justify-center cursor-pointer"
+          >
+            <h5 class="font-2 text-[5px] text-[#0C0C0C]">
+              اجاره خودرو با راننده
+            </h5>
+          </div>
+          <div
+            class="w-[51px] h-[14px] border border-solid border-gray-300 rounded-2xl dark:border-white dark:bg-white flex items-center justify-center cursor-pointer"
+          >
+            <h5 class="font-2 text-[5px] text-[#0C0C0C]">اجاره ماشین عروس</h5>
+          </div>
+        </div>
+        <div class="w-full h-[9px] pr-1.5 flex flex-row-reverse mt-1">
+          <div
+            class="w-[37px] h-[9px] font-1 text-[5px] whitespace-nowrap mr-[5px] flex items-center justify-center gap-0.5 ml-[74px] dark:text-white"
+          >
+            <h4>محل تحویل خودرو</h4>
+            <img class="w-[6px]" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJfSURBVHgB5VfdbcIwED4qHpAANSPQCdoNmk7QblBGaCcgnQA6AhPQDUInKJ2AdILkASQeQPS7cJaOkB87BPWhn2Qc4vt857uLzyb672hRDXQ6nUG73R7s9/tBOkmrFeE5Wa/XC3KEtQG9Xs9H94g2RPPyZGBEhG4Og6ar1WpOTRggikdovnqdoC1YIZR5YtAdKcN4bLfbPWw2m4jqAsrHaHtpMVrA7i+S73a7dyzT7/eXijciV3gAiKGaJOB3LnMwR/FnTnwmMBErWvKqqCaYq7wRWpHYZUZ5mbttgYUPlBHjSmHjtnNWnoXkhgmHXyioLA2oYaicCIsEfON6ugAkseOsF67MA77nZ+mnNhNyrrgkaQKge5e/TycCxv02E5pE5RW5JKrKsfhoQCVJ7KK8TqKaMBjD0xDIdsr4riDzrhagJdhqH+oUHyDlcDFLe/7hqgYj+DEpYmG1L6Kc4UH+CwblymK+Vxg3yRsD7wfjZCrpVYZYGYJzAR3X+n9brIqkvyki8oqwYg4Vh+GcEHhaZ+oBxCOSwdsyJmp8gO6NDiEIa+6WKYcPMEdvs9lZBrWrOX0J5mvTm53OgXQDgjeGVRMpTxAOHQlZAl4zG9D8ZNBsxbwq19pvC1Vr/FwBdQgJqGHoMl8m5F+6HFfmGIQmFzyQBFYkE4qGj2Qza6LU7lndk63wR4o/r5XY+mTL3pAzQKFHOGSiOFbKJ2U6Ki8mHEN866EpHoL0YkKHLTnB981jRxcT4BMtqLohOV3NoGiIx/uMMZQxjDe0j8auZnngMPAZQl9Ot9ttdNY17K/wCyOZGA3B4RhEAAAAAElFTkSuQmCC" alt="" />
+          </div>
+          <div
+            class="w-[37px] h-[9px] font-1 text-[5px] flex items-center justify-center gap-0.5 ml-1 dark:text-white"
+          >
+            <h4>تاریخ تحویل</h4>
+            <img class="w-[6px]" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJfSURBVHgB5VfdbcIwED4qHpAANSPQCdoNmk7QblBGaCcgnQA6AhPQDUInKJ2AdILkASQeQPS7cJaOkB87BPWhn2Qc4vt857uLzyb672hRDXQ6nUG73R7s9/tBOkmrFeE5Wa/XC3KEtQG9Xs9H94g2RPPyZGBEhG4Og6ar1WpOTRggikdovnqdoC1YIZR5YtAdKcN4bLfbPWw2m4jqAsrHaHtpMVrA7i+S73a7dyzT7/eXijciV3gAiKGaJOB3LnMwR/FnTnwmMBErWvKqqCaYq7wRWpHYZUZ5mbttgYUPlBHjSmHjtnNWnoXkhgmHXyioLA2oYaicCIsEfON6ugAkseOsF67MA77nZ+mnNhNyrrgkaQKge5e/TycCxv02E5pE5RW5JKrKsfhoQCVJ7KK8TqKaMBjD0xDIdsr4riDzrhagJdhqH+oUHyDlcDFLe/7hqgYj+DEpYmG1L6Kc4UH+CwblymK+Vxg3yRsD7wfjZCrpVYZYGYJzAR3X+n9brIqkvyki8oqwYg4Vh+GcEHhaZ+oBxCOSwdsyJmp8gO6NDiEIa+6WKYcPMEdvs9lZBrWrOX0J5mvTm53OgXQDgjeGVRMpTxAOHQlZAl4zG9D8ZNBsxbwq19pvC1Vr/FwBdQgJqGHoMl8m5F+6HFfmGIQmFzyQBFYkE4qGj2Qza6LU7lndk63wR4o/r5XY+mTL3pAzQKFHOGSiOFbKJ2U6Ki8mHEN866EpHoL0YkKHLTnB981jRxcT4BMtqLohOV3NoGiIx/uMMZQxjDe0j8auZnngMPAZQl9Ot9ttdNY17K/wCyOZGA3B4RhEAAAAAElFTkSuQmCC" alt="" />
+          </div>
+          <div
+            class="w-[37px] h-[9px] font-1 text-[5px] flex items-center justify-center gap-0.5 ml-1 dark:text-white"
+          >
+            <h4>ساعت تحویل</h4>
+            <img class="w-[6px]" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJfSURBVHgB5VfdbcIwED4qHpAANSPQCdoNmk7QblBGaCcgnQA6AhPQDUInKJ2AdILkASQeQPS7cJaOkB87BPWhn2Qc4vt857uLzyb672hRDXQ6nUG73R7s9/tBOkmrFeE5Wa/XC3KEtQG9Xs9H94g2RPPyZGBEhG4Og6ar1WpOTRggikdovnqdoC1YIZR5YtAdKcN4bLfbPWw2m4jqAsrHaHtpMVrA7i+S73a7dyzT7/eXijciV3gAiKGaJOB3LnMwR/FnTnwmMBErWvKqqCaYq7wRWpHYZUZ5mbttgYUPlBHjSmHjtnNWnoXkhgmHXyioLA2oYaicCIsEfON6ugAkseOsF67MA77nZ+mnNhNyrrgkaQKge5e/TycCxv02E5pE5RW5JKrKsfhoQCVJ7KK8TqKaMBjD0xDIdsr4riDzrhagJdhqH+oUHyDlcDFLe/7hqgYj+DEpYmG1L6Kc4UH+CwblymK+Vxg3yRsD7wfjZCrpVYZYGYJzAR3X+n9brIqkvyki8oqwYg4Vh+GcEHhaZ+oBxCOSwdsyJmp8gO6NDiEIa+6WKYcPMEdvs9lZBrWrOX0J5mvTm53OgXQDgjeGVRMpTxAOHQlZAl4zG9D8ZNBsxbwq19pvC1Vr/FwBdQgJqGHoMl8m5F+6HFfmGIQmFzyQBFYkE4qGj2Qza6LU7lndk63wR4o/r5XY+mTL3pAzQKFHOGSiOFbKJ2U6Ki8mHEN866EpHoL0YkKHLTnB981jRxcT4BMtqLohOV3NoGiIx/uMMZQxjDe0j8auZnngMPAZQl9Ot9ttdNY17K/wCyOZGA3B4RhEAAAAAElFTkSuQmCC" alt="" />
+          </div>
+          <div
+            class="w-[37px] h-[9px] font-1 text-[5px] flex items-center justify-center gap-0.5 ml-1 dark:text-white"
+          >
+            <h4>تاریخ بازگشت</h4>
+            <img class="w-[6px]" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJfSURBVHgB5VfdbcIwED4qHpAANSPQCdoNmk7QblBGaCcgnQA6AhPQDUInKJ2AdILkASQeQPS7cJaOkB87BPWhn2Qc4vt857uLzyb672hRDXQ6nUG73R7s9/tBOkmrFeE5Wa/XC3KEtQG9Xs9H94g2RPPyZGBEhG4Og6ar1WpOTRggikdovnqdoC1YIZR5YtAdKcN4bLfbPWw2m4jqAsrHaHtpMVrA7i+S73a7dyzT7/eXijciV3gAiKGaJOB3LnMwR/FnTnwmMBErWvKqqCaYq7wRWpHYZUZ5mbttgYUPlBHjSmHjtnNWnoXkhgmHXyioLA2oYaicCIsEfON6ugAkseOsF67MA77nZ+mnNhNyrrgkaQKge5e/TycCxv02E5pE5RW5JKrKsfhoQCVJ7KK8TqKaMBjD0xDIdsr4riDzrhagJdhqH+oUHyDlcDFLe/7hqgYj+DEpYmG1L6Kc4UH+CwblymK+Vxg3yRsD7wfjZCrpVYZYGYJzAR3X+n9brIqkvyki8oqwYg4Vh+GcEHhaZ+oBxCOSwdsyJmp8gO6NDiEIa+6WKYcPMEdvs9lZBrWrOX0J5mvTm53OgXQDgjeGVRMpTxAOHQlZAl4zG9D8ZNBsxbwq19pvC1Vr/FwBdQgJqGHoMl8m5F+6HFfmGIQmFzyQBFYkE4qGj2Qza6LU7lndk63wR4o/r5XY+mTL3pAzQKFHOGSiOFbKJ2U6Ki8mHEN866EpHoL0YkKHLTnB981jRxcT4BMtqLohOV3NoGiIx/uMMZQxjDe0j8auZnngMPAZQl9Ot9ttdNY17K/wCyOZGA3B4RhEAAAAAElFTkSuQmCC" alt="" />
+          </div>
+          <div
+            class="w-[37px] h-[9px] font-1 text-[5px] flex items-center justify-center gap-0.5 ml-1 dark:text-white whitespace-nowrap"
+          >
+            <h4>ساعت بازگشت</h4>
+            <img class="w-[6px]" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJfSURBVHgB5VfdbcIwED4qHpAANSPQCdoNmk7QblBGaCcgnQA6AhPQDUInKJ2AdILkASQeQPS7cJaOkB87BPWhn2Qc4vt857uLzyb672hRDXQ6nUG73R7s9/tBOkmrFeE5Wa/XC3KEtQG9Xs9H94g2RPPyZGBEhG4Og6ar1WpOTRggikdovnqdoC1YIZR5YtAdKcN4bLfbPWw2m4jqAsrHaHtpMVrA7i+S73a7dyzT7/eXijciV3gAiKGaJOB3LnMwR/FnTnwmMBErWvKqqCaYq7wRWpHYZUZ5mbttgYUPlBHjSmHjtnNWnoXkhgmHXyioLA2oYaicCIsEfON6ugAkseOsF67MA77nZ+mnNhNyrrgkaQKge5e/TycCxv02E5pE5RW5JKrKsfhoQCVJ7KK8TqKaMBjD0xDIdsr4riDzrhagJdhqH+oUHyDlcDFLe/7hqgYj+DEpYmG1L6Kc4UH+CwblymK+Vxg3yRsD7wfjZCrpVYZYGYJzAR3X+n9brIqkvyki8oqwYg4Vh+GcEHhaZ+oBxCOSwdsyJmp8gO6NDiEIa+6WKYcPMEdvs9lZBrWrOX0J5mvTm53OgXQDgjeGVRMpTxAOHQlZAl4zG9D8ZNBsxbwq19pvC1Vr/FwBdQgJqGHoMl8m5F+6HFfmGIQmFzyQBFYkE4qGj2Qza6LU7lndk63wR4o/r5XY+mTL3pAzQKFHOGSiOFbKJ2U6Ki8mHEN866EpHoL0YkKHLTnB981jRxcT4BMtqLohOV3NoGiIx/uMMZQxjDe0j8auZnngMPAZQl9Ot9ttdNY17K/wCyOZGA3B4RhEAAAAAElFTkSuQmCC" alt="" />
+          </div>
+        </div>
+        <div
+          class="w-full h-[20px] pr-1.5 flex flex-row-reverse mt-1 border border-solid items-center border-gray-200"
+        >
+          <div
+            class="w-[37px] h-[9px] font-1 text-[5px] flex items-center justify-center gap-0.5 ml-[74px] mr-[5px] dark:text-white pr-[11px]"
+          >
+            <h4 class="whitespace-nowrap">تهران-فرودگاه امام خمینی</h4>
+            <img class="w-[6px]" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJfSURBVHgB5VfdbcIwED4qHpAANSPQCdoNmk7QblBGaCcgnQA6AhPQDUInKJ2AdILkASQeQPS7cJaOkB87BPWhn2Qc4vt857uLzyb672hRDXQ6nUG73R7s9/tBOkmrFeE5Wa/XC3KEtQG9Xs9H94g2RPPyZGBEhG4Og6ar1WpOTRggikdovnqdoC1YIZR5YtAdKcN4bLfbPWw2m4jqAsrHaHtpMVrA7i+S73a7dyzT7/eXijciV3gAiKGaJOB3LnMwR/FnTnwmMBErWvKqqCaYq7wRWpHYZUZ5mbttgYUPlBHjSmHjtnNWnoXkhgmHXyioLA2oYaicCIsEfON6ugAkseOsF67MA77nZ+mnNhNyrrgkaQKge5e/TycCxv02E5pE5RW5JKrKsfhoQCVJ7KK8TqKaMBjD0xDIdsr4riDzrhagJdhqH+oUHyDlcDFLe/7hqgYj+DEpYmG1L6Kc4UH+CwblymK+Vxg3yRsD7wfjZCrpVYZYGYJzAR3X+n9brIqkvyki8oqwYg4Vh+GcEHhaZ+oBxCOSwdsyJmp8gO6NDiEIa+6WKYcPMEdvs9lZBrWrOX0J5mvTm53OgXQDgjeGVRMpTxAOHQlZAl4zG9D8ZNBsxbwq19pvC1Vr/FwBdQgJqGHoMl8m5F+6HFfmGIQmFzyQBFYkE4qGj2Qza6LU7lndk63wR4o/r5XY+mTL3pAzQKFHOGSiOFbKJ2U6Ki8mHEN866EpHoL0YkKHLTnB981jRxcT4BMtqLohOV3NoGiIx/uMMZQxjDe0j8auZnngMPAZQl9Ot9ttdNY17K/wCyOZGA3B4RhEAAAAAElFTkSuQmCC" alt="" />
+          </div>
+          <div class="w-[1px] h-1.5 bg-gray-300"></div>
+          <div
+            class="w-[37px] h-[9px] font-1 text-[5px] flex items-center justify-center gap-0.5 ml-1 dark:text-white"
+          >
+            <input
+              class="outline-none w-[50%] ml-[8px]"
+              data-jdp
+              placeholder="../../.."
+            />
+            <img
+              class="w-[6px] "
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJfSURBVHgB5VfdbcIwED4qHpAANSPQCdoNmk7QblBGaCcgnQA6AhPQDUInKJ2AdILkASQeQPS7cJaOkB87BPWhn2Qc4vt857uLzyb672hRDXQ6nUG73R7s9/tBOkmrFeE5Wa/XC3KEtQG9Xs9H94g2RPPyZGBEhG4Og6ar1WpOTRggikdovnqdoC1YIZR5YtAdKcN4bLfbPWw2m4jqAsrHaHtpMVrA7i+S73a7dyzT7/eXijciV3gAiKGaJOB3LnMwR/FnTnwmMBErWvKqqCaYq7wRWpHYZUZ5mbttgYUPlBHjSmHjtnNWnoXkhgmHXyioLA2oYaicCIsEfON6ugAkseOsF67MA77nZ+mnNhNyrrgkaQKge5e/TycCxv02E5pE5RW5JKrKsfhoQCVJ7KK8TqKaMBjD0xDIdsr4riDzrhagJdhqH+oUHyDlcDFLe/7hqgYj+DEpYmG1L6Kc4UH+CwblymK+Vxg3yRsD7wfjZCrpVYZYGYJzAR3X+n9brIqkvyki8oqwYg4Vh+GcEHhaZ+oBxCOSwdsyJmp8gO6NDiEIa+6WKYcPMEdvs9lZBrWrOX0J5mvTm53OgXQDgjeGVRMpTxAOHQlZAl4zG9D8ZNBsxbwq19pvC1Vr/FwBdQgJqGHoMl8m5F+6HFfmGIQmFzyQBFYkE4qGj2Qza6LU7lndk63wR4o/r5XY+mTL3pAzQKFHOGSiOFbKJ2U6Ki8mHEN866EpHoL0YkKHLTnB981jRxcT4BMtqLohOV3NoGiIx/uMMZQxjDe0j8auZnngMPAZQl9Ot9ttdNY17K/wCyOZGA3B4RhEAAAAAElFTkSuQmCC"
+              alt=""
+            />
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                jalaliDatepicker.startWatch();
+              });
+            </script>
+          </div>
+          <div class="w-[1px] h-1.5 bg-gray-300"></div>
+          <div
+            class="w-[37px] h-[9px] font-1 text-[5px] flex items-center justify-center gap-0.5 ml-1 dark:text-white"
+          >
+            <h4>ساعت تحویل</h4>
+            <img class="w-[6px]" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJfSURBVHgB5VfdbcIwED4qHpAANSPQCdoNmk7QblBGaCcgnQA6AhPQDUInKJ2AdILkASQeQPS7cJaOkB87BPWhn2Qc4vt857uLzyb672hRDXQ6nUG73R7s9/tBOkmrFeE5Wa/XC3KEtQG9Xs9H94g2RPPyZGBEhG4Og6ar1WpOTRggikdovnqdoC1YIZR5YtAdKcN4bLfbPWw2m4jqAsrHaHtpMVrA7i+S73a7dyzT7/eXijciV3gAiKGaJOB3LnMwR/FnTnwmMBErWvKqqCaYq7wRWpHYZUZ5mbttgYUPlBHjSmHjtnNWnoXkhgmHXyioLA2oYaicCIsEfON6ugAkseOsF67MA77nZ+mnNhNyrrgkaQKge5e/TycCxv02E5pE5RW5JKrKsfhoQCVJ7KK8TqKaMBjD0xDIdsr4riDzrhagJdhqH+oUHyDlcDFLe/7hqgYj+DEpYmG1L6Kc4UH+CwblymK+Vxg3yRsD7wfjZCrpVYZYGYJzAR3X+n9brIqkvyki8oqwYg4Vh+GcEHhaZ+oBxCOSwdsyJmp8gO6NDiEIa+6WKYcPMEdvs9lZBrWrOX0J5mvTm53OgXQDgjeGVRMpTxAOHQlZAl4zG9D8ZNBsxbwq19pvC1Vr/FwBdQgJqGHoMl8m5F+6HFfmGIQmFzyQBFYkE4qGj2Qza6LU7lndk63wR4o/r5XY+mTL3pAzQKFHOGSiOFbKJ2U6Ki8mHEN866EpHoL0YkKHLTnB981jRxcT4BMtqLohOV3NoGiIx/uMMZQxjDe0j8auZnngMPAZQl9Ot9ttdNY17K/wCyOZGA3B4RhEAAAAAElFTkSuQmCC" alt="" />
+          </div>
+          <div class="w-[1px] h-1.5 bg-gray-300"></div>
+          <div
+            class="w-[37px] h-[9px] font-1 text-[5px] flex items-center justify-center gap-0.5 ml-1 dark:text-white"
+          >
+            <input
+              class="outline-none w-[50%] ml-[8px]"
+              data-jdp
+              placeholder="../../.."
+            />
+            <img class="w-[6px] " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJfSURBVHgB5VfdbcIwED4qHpAANSPQCdoNmk7QblBGaCcgnQA6AhPQDUInKJ2AdILkASQeQPS7cJaOkB87BPWhn2Qc4vt857uLzyb672hRDXQ6nUG73R7s9/tBOkmrFeE5Wa/XC3KEtQG9Xs9H94g2RPPyZGBEhG4Og6ar1WpOTRggikdovnqdoC1YIZR5YtAdKcN4bLfbPWw2m4jqAsrHaHtpMVrA7i+S73a7dyzT7/eXijciV3gAiKGaJOB3LnMwR/FnTnwmMBErWvKqqCaYq7wRWpHYZUZ5mbttgYUPlBHjSmHjtnNWnoXkhgmHXyioLA2oYaicCIsEfON6ugAkseOsF67MA77nZ+mnNhNyrrgkaQKge5e/TycCxv02E5pE5RW5JKrKsfhoQCVJ7KK8TqKaMBjD0xDIdsr4riDzrhagJdhqH+oUHyDlcDFLe/7hqgYj+DEpYmG1L6Kc4UH+CwblymK+Vxg3yRsD7wfjZCrpVYZYGYJzAR3X+n9brIqkvyki8oqwYg4Vh+GcEHhaZ+oBxCOSwdsyJmp8gO6NDiEIa+6WKYcPMEdvs9lZBrWrOX0J5mvTm53OgXQDgjeGVRMpTxAOHQlZAl4zG9D8ZNBsxbwq19pvC1Vr/FwBdQgJqGHoMl8m5F+6HFfmGIQmFzyQBFYkE4qGj2Qza6LU7lndk63wR4o/r5XY+mTL3pAzQKFHOGSiOFbKJ2U6Ki8mHEN866EpHoL0YkKHLTnB981jRxcT4BMtqLohOV3NoGiIx/uMMZQxjDe0j8auZnngMPAZQl9Ot9ttdNY17K/wCyOZGA3B4RhEAAAAAElFTkSuQmCC" alt="" />
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                jalaliDatepicker.startWatch();
+              });
+            </script>
+          </div>
+          <div class="w-[1px] h-1.5 bg-gray-300"></div>
+          <div
+            class="w-[37px] h-[9px] font-1 text-[5px] flex items-center justify-center gap-0.5 ml-1 dark:text-white whitespace-nowrap"
+          >
+            <h4>ساعت بازگشت</h4>
+            <img class="w-[6px] mr-[2px] " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJfSURBVHgB5VfdbcIwED4qHpAANSPQCdoNmk7QblBGaCcgnQA6AhPQDUInKJ2AdILkASQeQPS7cJaOkB87BPWhn2Qc4vt857uLzyb672hRDXQ6nUG73R7s9/tBOkmrFeE5Wa/XC3KEtQG9Xs9H94g2RPPyZGBEhG4Og6ar1WpOTRggikdovnqdoC1YIZR5YtAdKcN4bLfbPWw2m4jqAsrHaHtpMVrA7i+S73a7dyzT7/eXijciV3gAiKGaJOB3LnMwR/FnTnwmMBErWvKqqCaYq7wRWpHYZUZ5mbttgYUPlBHjSmHjtnNWnoXkhgmHXyioLA2oYaicCIsEfON6ugAkseOsF67MA77nZ+mnNhNyrrgkaQKge5e/TycCxv02E5pE5RW5JKrKsfhoQCVJ7KK8TqKaMBjD0xDIdsr4riDzrhagJdhqH+oUHyDlcDFLe/7hqgYj+DEpYmG1L6Kc4UH+CwblymK+Vxg3yRsD7wfjZCrpVYZYGYJzAR3X+n9brIqkvyki8oqwYg4Vh+GcEHhaZ+oBxCOSwdsyJmp8gO6NDiEIa+6WKYcPMEdvs9lZBrWrOX0J5mvTm53OgXQDgjeGVRMpTxAOHQlZAl4zG9D8ZNBsxbwq19pvC1Vr/FwBdQgJqGHoMl8m5F+6HFfmGIQmFzyQBFYkE4qGj2Qza6LU7lndk63wR4o/r5XY+mTL3pAzQKFHOGSiOFbKJ2U6Ki8mHEN866EpHoL0YkKHLTnB981jRxcT4BMtqLohOV3NoGiIx/uMMZQxjDe0j8auZnngMPAZQl9Ot9ttdNY17K/wCyOZGA3B4RhEAAAAAElFTkSuQmCC" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- #endregion time-->
+    </div>
+    <!-- #endregion header-->
+    <!-- #region main-->
+    <div
+      class="w-full h-[30px] mt-[40px] mx-auto px-[8px] flex gap-[7px] flex-row-reverse items-center pt-[10px]"
+    >
+      <div class="w-[40px]">
+        <img src="/assets/Honda-DvntnCHp.png" alt="" />
+      </div>
+      <div class="w-[40px]">
+        <img src="/assets/Nissan-C4j3scUw.png" alt="" />
+      </div>
+      <div class="w-[40px]">
+        <img src="/assets/Marcedes-B0BBB7p5.png" alt="" />
+      </div>
+      <div class="w-[40px]">
+        <img src="/assets/lexus-logo-Nzq-y573.png" alt="" />
+      </div>
+      <div class="w-[40px]">
+        <img src="/assets/KIA-Bl5hcOo6.png" alt="" />
+      </div>
+      <div class="w-[40px]">
+        <img src="/assets/KIA%20(2)-ME06LO3Z.png" alt="" />
+      </div>
+      <div class="w-[40px]">
+        <img src="/assets/KIA%20(1)-BPN8aror.png" alt="" />
+      </div>
+      <div class="w-[40px]">
+        <img src="/assets/Hyundai-BjEzhuQ9.png" alt="" />
+      </div>
+      <div class="w-[40px]">
+        <img src="/assets/Honda-DvntnCHp.png" alt="" />
+      </div>
+      <div class="w-[40px]">
+        <img src="/assets/BMW%20(1)-B_vQtNj1.png" alt="" />
+      </div>
+    </div>
+    <!-- #region1 -->
+    <div
+      class="w-[320px] h-[120px] mx-auto mt-[17px] rounded-[16px] bg-cover bg-no-repeat pc pt-2.5 "
+    >
+     <div class="w-[66px] h-[16px] m-a  ">
+        <h3 class="text-[10px] font-2 text-[#FDB713] whitespace-nowrap">
+          چــــــرا اُتو رِنت؟
+        </h3>
+      </div>
+      
+      <div class="w-[90%] h-[55px] m-a pt-1">
+        <h4 class="text-center text-[7px] text-white">اجاره خودرو از یک شرکت اجاره خودرو با سابقه به شما کمک می‌کند تا در مسافرت ها، قرار ملاقات‌ های مهم، مجالس و مراسم‌های خانوادگی ماشین مناسب خود را در اختیار داشته باشید. اگر شما اصلا خودرویی در اختیار ندارید یا خودروی شما مطمئن نیست، می‌توانید از سوییچ، خودروی مناسب خود را کرایه کرده و با آسودگی به سفربروید
+        </h4> .
+
+      </div>
+      <div class="w-[90px] h-[80px] rounded-[8px] border border-solid border-gray-500 bg-white absolute left-[50px]  dark:bg-gray-700 flex flex-col items-center justify-center gap-1 ">
+        <div>
+          <img class="w-[20px]  " src="data:image/png;base64,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" alt="">
+
+        </div>
+         <div><h4 class="font-2 text-[10px] text-[#414141] dark:text-white">قیمت مناسب</h4></div>
+         <div><h4 class="font-2 text-[5px] text-center text-[#757575]  dark:text-white">هدف ما، ارائه بهترین خدمات با مناسب ترین قیمت ممکن است.</h4></div>
+      </div>
+
+
+       <div class="w-[90px] h-[80px] rounded-[8px] border border-solid border-gray-500 bg-white absolute left-[150px]  dark:bg-gray-700 flex flex-col items-center justify-center gap-1 ">
+        <div>
+          <img class="w-[20px]  " src="data:image/png;base64,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" alt="">
+        </div>
+
+         <div>
+          <h4 class="font-2 text-[10px] text-[#414141] dark:text-white">پشتیبانی 24 ساعته</h4>
+        </div>
+         <div>
+          <h4 class="font-2 text-[5px] text-center text-[#757575]  dark:text-white">هدف مکارشناسان ما در هر زمان و مکان، پاسخگوی سوالات شما خواهند بود.</h4>
+        </div>
+      </div>
+
+
+       <div class="w-[90px] h-[80px] rounded-[8px] border border-solid border-gray-500 bg-white absolute left-[250px]  dark:bg-gray-700 flex flex-col items-center justify-center gap-1 ">
+        <div>
+          <img class="w-[20px]  " src="data:image/png;base64,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" alt="">
+
+        </div>
+         <div>
+          <h4 class="font-2 text-[10px] text-[#414141] dark:text-white">تحویل در محل</h4></div>
+         <div>
+          <h4 class="font-2 text-[5px] text-center text-[#757575]  dark:text-white px-[1px]">هدف ماتحویل خودرو در زمان و مکان تعیین شده توسط شما خواهد بود.</h4>
+        </div>
+      </div>
+    
+      
+    </div>
+    <div class="w-[320px] h-[50px]  m-a  margin-60
+    flex gap-[5px]">
+
+      <div class="w-[60px] h-full bg-white rounded-[7px] flex flex-col items-center justify-center pt-[5px]">
+        <div class="font-3 text-[8px]">اسپرت</div>
+        <div><img class="w-[60px]" src="/assets/5-BYyNibpB.png" alt=""></div>
+        <div class="w-[80%] h-[3px] mt-[5px] bg-orange-400 rounded-[50px]"></div>
+      </div>
+
+      <div class="w-[60px] h-full bg-white rounded-[7px] flex flex-col items-center justify-center pt-[5px]">
+        <div class="font-3 text-[8px]">شاسی بلند</div>
+        <div><img class="w-[60px]" src="/assets/6-Bxxq3cnr.png" alt=""></div>
+        <div class="w-[80%] h-[3px] mt-[5px] bg-orange-400 rounded-[50px]"></div>
+      </div>
+      <div class="w-[60px] h-full bg-white rounded-[7px] flex flex-col items-center justify-center pt-[5px]">
+        <div class="font-3 text-[8px]">سدان</div>
+        <div><img class="w-[60px]" src="/assets/7-BIBRGPkG.png" alt=""></div>
+        <div class="w-[80%] h-[3px] mt-[5px] bg-orange-400 rounded-[50px]"></div>
+      </div>
+      <div class="w-[60px] h-full bg-white rounded-[7px] flex flex-col items-center justify-center pt-[5px]">
+        <div class="font-3 text-[8px]">شاسی بلند</div>
+        <div><img class="w-[60px]" src="/assets/8-DgGH4V5v.png" alt=""></div>
+        <div class="w-[80%] h-[3px] mt-[5px] bg-orange-400 rounded-[50px]"></div>
+      </div>
+      <div class="w-[60px] h-full bg-white rounded-[7px] flex flex-col items-center justify-center pt-[5px]">
+        <div class="font-3 text-[8px]">کوپه</div>
+        <div><img  class="w-[51px] rotate-180 rotate-x-180" src="/assets/9-CZCHHJh7.png" alt=""></div>
+        <div class="w-[80%] h-[5px]  bg-orange-400 rounded-[50px]"></div>
+      </div>
+
+    </div>
+    <!-- #endregion1 -->
+     <!-- #region2 -->
+      <div class="w-[325px] h-[80px]  m-a  margin-20 ">
+        <div class="flex flex-col items-center justify-center gap-1 mt-2.5">
+          <h3 class="font-1 text-[9px] text-[#474747]  dark:text-white">مشاهده موجودی خودروها </h3>
+        <div class="font-2 text-[15px] dark:text-white">رزرو خودرو در  <span class="text-[#D79C10]">اُتـــورِنت</span></div>
+      </div>
+        <div class="flex items-center justify-center gap-2">
+          <div class=" flex gap-1 flex-row-reverse mt-3">
+            <div class="w-[50px] h-[18px] bg-[#194BF0] rounded-[2px] flex items-center justify-center"><h5 class="font-1 text-white text-[7px]">پرطرفدار</h5></div>
+             <div class="w-[50px] h-[18px]  rounded-[2px] border border-solid border-[#194BF0] dark:border-white flex items-center justify-center"><h5 class="font-1 text-[#194BF0] dark:text-white text-[7px]">لوکس</h5>
+            </div>
+            <div class="w-[50px] h-[18px]  rounded-[2px] border border-solid border-[#194BF0] dark:border-white flex items-center justify-center"><h5 class="font-1 text-[#194BF0] dark:text-white text-[7px]">اقتصادی</h5>
+            </div>
+        </div>
+          
+        </div>
+        <div class="flex items-end">
+            <h6 class="font-1 text-[7px] text-[#194BF0] dark:text-white">مشاهده همه</h6></div>
+      </div>
+      <!-- #endregion2 -->
+       <!-- #region3 -->
+        
+        <!-- #endregion3 -->
+
+    <!-- #endregion main-->
+
+    <!-- #endregion project-->
+  </body>
+</html>
